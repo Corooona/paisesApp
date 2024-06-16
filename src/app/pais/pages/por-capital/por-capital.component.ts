@@ -17,16 +17,16 @@ export class PorCapitalComponent {
   buscar(termino: string){
     this.hayError = false;
     this.termino=termino;
-    
+
 
     this.paisService.buscarCapital(termino)
-    .subscribe( 
+    .subscribe(
       (paises)=> {
       console.log(paises);
       this.paises=paises;
 
     }, (err)=>{
-      this.hayError = true; 
+      this.hayError = true;
       this.paises=[];
       console.info(err);
     }) ;
